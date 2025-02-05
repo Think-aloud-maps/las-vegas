@@ -212,8 +212,8 @@
             { title: "Current Time", info: "10:50 AM." },
             { title: "Address of Origin", info: "1909 Ballard Dr, Las Vegas, NV 89104." },
             { title: "Address of Destination", info: "4220 W Windmill Ln #140, Las Vegas, NV 89139." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "11.70 miles." },
+            { title: "Estimated Time to Destination", info: "25 minutes." },
             { title: "State of Charge of Battery", info: "21% charge." },
             { title: "Range of Current Battery", info: "63 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "47 miles." },
@@ -231,10 +231,10 @@
                 name: 'NV Energy',
 
                 location: '6226 W Sahara Ave, Las Vegas, NV 89146, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '7',
+                originTime: '21',
+                destDistance: '7.88',
+                destTime: '16',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -246,7 +246,7 @@
                         { type: 'J1772', value: '438' }
                     ],
                 socketAvalability: [
-                        { type: 'J1772', value: '3' }
+                        { type: 'J1772', value: '4' }
                     ],
 
                 energySource: '52% grid, 48% renewable',
@@ -270,10 +270,10 @@
                 name: 'UNLV - Tropicana Parking Garage',
 
                 location: '12 Wilbur St, Las Vegas 89119',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '5.59',
+                originTime: '16',
+                destDistance: '7.76',
+                destTime: '15',
                 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -935,8 +935,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
